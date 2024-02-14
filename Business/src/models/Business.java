@@ -34,6 +34,22 @@ public class Business {
         }
         br.close();
     }
+    public void readDataByte() throws NumberFormatException, IOException {
+        File f = new File("C:\\Users\\PC\\Desktop\\BusinessEm2.txt");
+        FileReader file = new FileReader(f);
+        BufferedReader br= new BufferedReader(file);
+        String cad;
+        while ((cad = br.readLine()) != null) {
+            String[] info = cad.split(",");
+            int id = Integer.parseInt(info[0]);
+            String firstName = info[1];
+            String lastName = info[2];
+            char gender = info[3].charAt(0);
+            Employee auxEmp = new Employee(id, firstName, lastName, gender);
+            this.addNewEmployee(auxEmp);
+        }
+        br.close();
+    }
 
     public String showEmployees() {
         String empInfo = "";
