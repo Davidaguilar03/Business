@@ -14,7 +14,7 @@ public class Control {
     }
 
     public void init() throws NumberFormatException, IOException {
-        businessObj.readData();
-        System.out.println(businessObj.showEmployees());
+        businessObj.readDataByte();
+        //System.out.println(businessObj.showEmployees());
     }
 }
