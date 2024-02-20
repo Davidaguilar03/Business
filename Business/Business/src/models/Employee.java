@@ -5,12 +5,16 @@ public class Employee {
     private String firstName;
     private String lastName;
     private char gender;
+    private int weight;
+    private int salary;
 
-    public Employee(int id, String name, String lastName, char gender) {
+    public Employee(int id, String firstName, String lastName, char gender, int weight, int salary) {
         this.id = id;
-        this.firstName = name;
+        this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
+        this.weight = weight;
+        this.salary = salary;
     }
 
     public int getId() {
@@ -45,4 +49,19 @@ public class Employee {
         this.gender = gender;
     }
 
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
 }
